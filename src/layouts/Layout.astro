@@ -53,6 +53,7 @@ const jsonld = {
     <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />
   </head>
   <body>
+    <div class="preloader" aria-hidden="true"><div class="preloader__mark"><span class="preloader__logo"></span><span class="preloader__name">Constance</span><span class="preloader__sub">creartist</span></div></div>
     <Fragment set:html={header} />
     <Fragment set:html={fsmenu} />
     <main id="top"><slot /></main>

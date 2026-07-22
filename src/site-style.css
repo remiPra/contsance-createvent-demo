@@ -441,3 +441,19 @@ body.menu-open .fab{opacity:0; transform:translateY(22px) scale(.92); pointer-ev
   -webkit-mask:url(/logo-mask.png) center/contain no-repeat; mask:url(/logo-mask.png) center/contain no-repeat}
 .brand-txt{display:inline-flex; flex-direction:column; line-height:1}
 .foot .brand-mark{width:26px; height:32px}
+
+/* ---------- Intro loader (préchargeur de marque, LCP-friendly, piloté CSS) ---------- */
+.preloader{position:fixed; inset:0; z-index:200; background:var(--paper); display:flex; align-items:center; justify-content:center;
+  will-change:transform; animation:introout .6s cubic-bezier(.76,0,.24,1) 1.05s forwards}
+.preloader__mark{display:flex; flex-direction:column; align-items:center; gap:16px; text-align:center;
+  opacity:0; transform:translateY(12px) scale(.94); animation:introin .6s cubic-bezier(.2,.8,.2,1) .05s forwards}
+.preloader__logo{width:clamp(104px,15vw,140px); aspect-ratio:72/88; background:var(--wine-ink);
+  -webkit-mask:url(/logo-mask.png) center/contain no-repeat; mask:url(/logo-mask.png) center/contain no-repeat}
+.preloader__name{font-family:"Cormorant Garamond",Georgia,serif; font-weight:600; font-size:clamp(2.1rem,5.5vw,3rem);
+  color:var(--wine-ink); line-height:1; letter-spacing:.01em}
+.preloader__sub{font-family:"Petit Formal Script",cursive; font-size:clamp(1.05rem,2.6vw,1.45rem);
+  color:var(--terracotta); line-height:1; margin-top:-8px}
+@keyframes introin{to{opacity:1; transform:none}}
+@keyframes introout{to{transform:translateY(-100%); visibility:hidden}}
+.no-intro .preloader{display:none}
+@media (prefers-reduced-motion:reduce){ .preloader{display:none} }
