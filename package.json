@@ -1,0 +1,17 @@
+{
+  "name": "constance-astro",
+  "type": "module",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^4.16.18",
+    "@fontsource/cormorant-garamond": "^5.1.0",
+    "@fontsource/karla": "^5.1.0",
+    "@fontsource/petit-formal-script": "^5.1.0"
+  }
+}

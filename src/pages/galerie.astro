@@ -1,0 +1,7 @@
+---
+import Layout from "../layouts/Layout.astro";
+import content from "../page-galerie.html?raw";
+---
+<Layout title={"Galerie mariage — coiffures & maquillages | Constance Laval"} description={"Découvrez les coiffures et maquillages de mariée réalisés par Constance à Laval : chignons fleuris, coiffes sur-mesure, beauté éditoriale et mariages."} ogImage={"/images/coiffure-tresse.webp"}>
+  <Fragment set:html={content} />
+</Layout>

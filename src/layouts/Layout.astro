@@ -1,0 +1,62 @@
+---
+import "@fontsource/cormorant-garamond/500.css";
+import "@fontsource/cormorant-garamond/600.css";
+import "@fontsource/petit-formal-script/400.css";
+import "@fontsource/karla/400.css";
+import "@fontsource/karla/500.css";
+import "@fontsource/karla/700.css";
+import css from "../site-style.css?raw";
+import header from "../site-header.html?raw";
+import fsmenu from "../site-fsmenu.html?raw";
+import tail from "../site-tail.html?raw";
+import js from "../site-script.js?raw";
+
+const { title, description, ogImage = "/images/hero-mariee-dos.webp" } = Astro.props;
+
+const jsonld = {
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  name: "Constance — Mise en beauté événementielle",
+  description:
+    "Coiffure, maquillage et créations sur-mesure pour le mariage. Coiffeuse, perruquière-posticheuse et maquilleuse à Laval.",
+  image: new URL(ogImage, Astro.site ?? Astro.url).href,
+  url: (Astro.site ?? Astro.url).href,
+  areaServed: ["Laval", "Mayenne", "Pays de la Loire"],
+  knowsAbout: [
+    "coiffure de mariage",
+    "maquillage de mariée",
+    "coiffe et ornements sur-mesure",
+    "chignon de mariée",
+  ],
+  sameAs: ["https://www.instagram.com/creartist.even/"],
+};
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={Astro.url.href} />
+    <link rel="icon" href="/logo-mask.png" />
+    <meta name="theme-color" content="#F4ECDE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Constance — Mise en beauté événementielle" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site ?? Astro.url).href} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script is:inline>document.documentElement.dataset.theme = "light";</script>
+    <style is:global set:html={css}></style>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />
+  </head>
+  <body>
+    <Fragment set:html={header} />
+    <Fragment set:html={fsmenu} />
+    <main id="top"><slot /></main>
+    <Fragment set:html={tail} />
+    <script is:inline set:html={js} />
+  </body>
+</html>

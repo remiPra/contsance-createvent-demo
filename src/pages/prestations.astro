@@ -1,0 +1,7 @@
+---
+import Layout from "../layouts/Layout.astro";
+import content from "../page-prestations.html?raw";
+---
+<Layout title={"Prestations coiffure & maquillage mariage Laval | Constance"} description={"Coiffure de mariée, maquillage, coiffes et ornements sur-mesure, mises en beauté spectacle et maternité à Laval. Prestations mariage sur devis par Constance."} ogImage={"/images/mariage-portrait.webp"}>
+  <Fragment set:html={content} />
+</Layout>

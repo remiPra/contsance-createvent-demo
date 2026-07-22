@@ -1,0 +1,7 @@
+---
+import Layout from "../layouts/Layout.astro";
+import content from "../page-histoire.html?raw";
+---
+<Layout title={"Mon histoire — coiffeuse mariage à Laval | Constance"} description={"Le parcours de Constance : coiffeuse depuis 9 ans, perruquière-posticheuse et maquilleuse à Laval. Une double formation au service de votre mise en beauté de mariée."} ogImage={"/images/chignon-detail.webp"}>
+  <Fragment set:html={content} />
+</Layout>

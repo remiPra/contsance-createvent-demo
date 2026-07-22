@@ -1,0 +1,7 @@
+---
+import Layout from "../layouts/Layout.astro";
+import content from "../page-contact.html?raw";
+---
+<Layout title={"Contact & devis mariage à Laval | Constance"} description={"Contactez Constance pour votre mariage à Laval : coiffure, maquillage et créations sur-mesure. Décrivez votre projet en quelques clics — réponse sous 48 h par email, Instagram ou WhatsApp."} ogImage={"/images/hero-banner.webp"}>
+  <Fragment set:html={content} />
+</Layout>
