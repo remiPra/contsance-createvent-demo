@@ -10,8 +10,8 @@
 
   // Full-screen menu
   var fsmenu=document.getElementById('fsmenu'), menuBtn=document.getElementById('menuBtn');
-  function openMenu(){ fsmenu.classList.add('open'); document.body.classList.add('menu-open'); menuBtn.setAttribute('aria-expanded','true'); fsmenu.setAttribute('aria-hidden','false'); }
-  function closeMenu(){ fsmenu.classList.remove('open'); document.body.classList.remove('menu-open'); menuBtn.setAttribute('aria-expanded','false'); fsmenu.setAttribute('aria-hidden','true'); }
+  function openMenu(){ fsmenu.classList.add('open'); document.body.classList.add('menu-open'); menuBtn.setAttribute('aria-expanded','true'); fsmenu.setAttribute('aria-hidden','false'); fsmenu.removeAttribute('inert'); }
+  function closeMenu(){ fsmenu.classList.remove('open'); document.body.classList.remove('menu-open'); menuBtn.setAttribute('aria-expanded','false'); fsmenu.setAttribute('aria-hidden','true'); fsmenu.setAttribute('inert',''); }
   menuBtn.addEventListener('click',function(){ fsmenu.classList.contains('open')?closeMenu():openMenu(); });
   document.getElementById('fsClose').addEventListener('click',closeMenu);
   fsmenu.querySelectorAll('[data-fs]').forEach(function(a){ a.addEventListener('click',closeMenu); });

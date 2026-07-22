@@ -1,5 +1,5 @@
 :root{
-  --paper:#F4ECDE; --kraft:#E9DAC2; --card:#FBF6EC; --ink:#2C2320; --muted:#8A7A6B;
+  --paper:#F4ECDE; --kraft:#E9DAC2; --card:#FBF6EC; --ink:#2C2320; --muted:#6E6053;
   --wine:#6B2333; --wine-ink:#6B2333; --terracotta:#A65A43; --blush:#E6C6BF; --line:#D9C8AD;
   --field:#FFFDF8; --shadow:26 35 20; --accent:var(--wine);
 }
@@ -11,7 +11,7 @@
   }
 }
 :root[data-theme="light"]{
-  --paper:#F4ECDE; --kraft:#E9DAC2; --card:#FBF6EC; --ink:#2C2320; --muted:#8A7A6B;
+  --paper:#F4ECDE; --kraft:#E9DAC2; --card:#FBF6EC; --ink:#2C2320; --muted:#6E6053;
   --wine:#6B2333; --wine-ink:#6B2333; --terracotta:#A65A43; --blush:#E6C6BF; --line:#D9C8AD; --field:#FFFDF8; --shadow:26 35 20;
 }
 :root[data-theme="dark"]{
@@ -444,7 +444,7 @@ body.menu-open .fab{opacity:0; transform:translateY(22px) scale(.92); pointer-ev
 
 /* ---------- Intro loader (préchargeur de marque, LCP-friendly, piloté CSS) ---------- */
 .preloader{position:fixed; inset:0; z-index:200; background:var(--paper); display:flex; align-items:center; justify-content:center;
-  will-change:transform; animation:introout .6s cubic-bezier(.76,0,.24,1) 1.05s forwards}
+  will-change:transform; animation:introout .5s cubic-bezier(.76,0,.24,1) .6s forwards}
 .preloader__mark{display:flex; flex-direction:column; align-items:center; gap:16px; text-align:center;
   opacity:0; transform:translateY(12px) scale(.94); animation:introin .6s cubic-bezier(.2,.8,.2,1) .05s forwards}
 .preloader__logo{width:clamp(104px,15vw,140px); aspect-ratio:72/88; background:var(--wine-ink);
