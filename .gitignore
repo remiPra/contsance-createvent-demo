@@ -15,3 +15,7 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 .vscode/
+
+# dev screenshots
+_*.png
+_*.webp
