@@ -1,7 +1,79 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import content from "../page-contact.html?raw";
+import data from "../data/contact.json";
+
+const { hero, note, faq } = data;
 ---
 <Layout title={"Contact & devis mariage à Laval | Constance"} description={"Contactez Constance pour votre mariage à Laval : coiffure, maquillage et créations sur-mesure. Décrivez votre projet en quelques clics — réponse sous 48 h par email, Instagram ou WhatsApp."} ogImage={"/images/hero-banner.webp"}>
-  <Fragment set:html={content} />
+  <div class="wrap page-hero">
+    <p class="eyebrow">{hero.eyebrow}</p>
+    <h1>{hero.title}</h1>
+    <p class="lead">{hero.lead}</p>
+  </div>
+  <section style="padding-top:clamp(10px,2vw,24px)"><div class="wrap">
+    <div class="projet reveal">
+      <!-- Formulaire multi-étapes piloté par site-script.js : ne pas éditer via le CMS -->
+      <div class="pj" id="pj">
+        <div class="pj__bar"><span id="pjfill"></span></div>
+        <div class="pj__steps">
+          <div class="pj__step is-active" data-step="0">
+            <span class="pj__q">Quel est votre projet&nbsp;?</span>
+            <div class="chips" data-single="projet">
+              <button type="button" class="chip" data-v="un mariage">Mariage</button>
+              <button type="button" class="chip" data-v="un shooting / projet éditorial">Shooting &amp; éditorial</button>
+              <button type="button" class="chip" data-v="un spectacle / projet audiovisuel">Spectacle</button>
+              <button type="button" class="chip" data-v="un EVJF / une soirée">EVJF &amp; soirée</button>
+              <button type="button" class="chip" data-v="un autre projet">Autre</button>
+            </div>
+          </div>
+          <div class="pj__step" data-step="1">
+            <span class="pj__q">Quelles prestations vous font envie&nbsp;?</span>
+            <p class="pj__hint">Plusieurs choix possibles</p>
+            <div class="chips" data-multi="prestations">
+              <button type="button" class="chip" data-v="Coiffure">Coiffure</button>
+              <button type="button" class="chip" data-v="Maquillage">Maquillage</button>
+              <button type="button" class="chip" data-v="Coiffe &amp; ornements sur-mesure">Coiffe &amp; ornements</button>
+              <button type="button" class="chip" data-v="Un essai en amont">Essai</button>
+              <button type="button" class="chip" data-v="Le cortège / les témoins">Cortège &amp; témoins</button>
+            </div>
+            <div class="pj__nav"><button type="button" class="pj__back" data-back>← Retour</button><button type="button" class="btn btn-primary" data-next>Continuer</button></div>
+          </div>
+          <div class="pj__step" data-step="2">
+            <span class="pj__q">C'est pour quand, et où&nbsp;?</span>
+            <div class="pj__fields">
+              <div class="field"><label for="pjdate">Date envisagée</label><input id="pjdate" placeholder="ex. 14 juin 2026 — ou « pas encore fixée »"></div>
+              <div class="field"><label for="pjlieu">Lieu / ville</label><input id="pjlieu" placeholder="ex. Laval, un château, un domaine…"></div>
+            </div>
+            <div class="pj__nav"><button type="button" class="pj__back" data-back>← Retour</button><button type="button" class="btn btn-primary" data-next>Continuer</button></div>
+          </div>
+          <div class="pj__step" data-step="3">
+            <span class="pj__q">Un mot sur vous&nbsp;?</span>
+            <div class="pj__fields">
+              <div class="field"><label for="pjname">Votre prénom</label><input id="pjname" placeholder="Prénom"></div>
+              <div class="field"><label for="pjmsg">Votre message <span class="muted">(optionnel)</span></label><textarea id="pjmsg" placeholder="Votre style, une inspiration, une question…"></textarea></div>
+            </div>
+            <div class="pj__nav"><button type="button" class="pj__back" data-back>← Retour</button><button type="button" class="btn btn-primary" data-next>Voir mon récap</button></div>
+          </div>
+          <div class="pj__step pj__final" data-step="4">
+            <span class="pj__q">Votre demande est prête&nbsp;! ✨</span>
+            <div class="pj__recap" id="pjrecap"></div>
+            <p class="pj__hint">Envoyez-la comme vous préférez&nbsp;:</p>
+            <div class="pj__send">
+              <a class="sbtn mail" id="sMail"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7.5l8.5 6 8.5-6"/></svg>E-mail</a>
+              <a class="sbtn ig" id="sIg" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>DM Instagram</a>
+              <a class="sbtn wa" id="sWa" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 0 1 6 13.8 8.2 8.2 0 0 1-9.9 1.3l-.35-.2-2.95.77.8-2.87-.23-.37A8.2 8.2 0 0 1 12 3.8zm4.6 10.4c-.25-.13-1.47-.72-1.7-.8-.23-.09-.4-.13-.56.13-.17.25-.64.8-.79.96-.14.17-.29.19-.54.06a6.6 6.6 0 0 1-3.3-2.9c-.25-.42.25-.4.71-1.3.08-.17.04-.31-.02-.44-.06-.13-.56-1.36-.77-1.86-.2-.48-.41-.42-.56-.42h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.78 2.72 4.3 3.8 1.5.65 2.09.7 2.84.6.46-.07 1.47-.6 1.68-1.19.2-.58.2-1.07.14-1.18-.06-.1-.23-.16-.48-.28z"/></svg>WhatsApp</a>
+            </div>
+            <button type="button" class="pj__restart" data-restart>↺ Recommencer</button>
+          </div>
+        </div>
+      </div>
+      <p class="pj__note">{note}</p>
+    </div>
+
+    <div class="faq reveal" style="max-width:760px; margin:clamp(40px,6vw,72px) auto 0">
+      {faq.map((f) => (
+        <details><summary>{f.question}</summary><p>{f.answer}</p></details>
+      ))}
+    </div>
+  </div></section>
 </Layout>

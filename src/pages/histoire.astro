@@ -1,7 +1,46 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import content from "../page-histoire.html?raw";
+import data from "../data/histoire.json";
+
+const { hero, stories, values, cta } = data;
+
+// Icônes des convictions (décoratives, figées) — associées par position.
+const VALUE_ICONS = [
+  '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 21l-5-2.3 1-5.5-4-3.9 5.5-.8z"/></svg>',
+  '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
+  '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>',
+];
 ---
 <Layout title={"Mon histoire — coiffeuse mariage à Laval | Constance"} description={"Le parcours de Constance : coiffeuse depuis 9 ans, perruquière-posticheuse et maquilleuse à Laval. Une double formation au service de votre mise en beauté de mariée."} ogImage={"/images/chignon-detail.webp"}>
-  <Fragment set:html={content} />
+  <div class="wrap page-hero">
+    <p class="eyebrow">{hero.eyebrow}</p>
+    <h1>{hero.title}</h1>
+    <p class="lead">{hero.lead}</p>
+  </div>
+  <section><div class="wrap">
+    {stories.map((s) => (
+      <div class={s.reversed ? "story rev reveal" : "story reveal"}>
+        <div class="story-media"><div class="frame">{!s.reversed && <span class="pin"></span>}<img src={s.image} alt={s.imageAlt}></div></div>
+        <div><span class="num">{s.label}</span><h2>{s.title}</h2>
+          <p>{s.paragraph1}</p>
+          <p>{s.paragraph2}</p>
+          <div class="chips">{s.chips.map((c) => <span class="chip">{c}</span>)}</div>
+        </div>
+      </div>
+    ))}
+  </div></section>
+  <section class="band-kraft"><div class="wrap">
+    <div class="sec-head reveal" style="max-width:720px"><p class="eyebrow">{values.eyebrow}</p><h2>{values.title}</h2></div>
+    <div class="values">
+      {values.items.map((v, i) => (
+        <div class="value reveal"><Fragment set:html={VALUE_ICONS[i] ?? VALUE_ICONS[VALUE_ICONS.length - 1]} />
+          <h3>{v.title}</h3><p>{v.text}</p></div>
+      ))}
+    </div>
+  </div></section>
+  <section class="reveal"><div class="wrap cta">
+    <h2>{cta.title}</h2>
+    <p class="lead">{cta.lead}</p>
+    <div class="cta-actions"><a href={cta.primaryHref} class="btn btn-primary">{cta.primaryLabel}</a><a href={cta.ghostHref} class="btn btn-ghost">{cta.ghostLabel}</a></div>
+  </div></section>
 </Layout>

@@ -1,0 +1,132 @@
+{
+  "hero": {
+    "eyebrow": "Mise en beauté événementielle",
+    "title": "Je vous sublime dans tous vos instants de vie",
+    "lead": "Coiffure, maquillage et créations sur-mesure — du wedding day à la scène, chaque mise en beauté est pensée rien que pour vous.",
+    "image": "/images/hero-mariee-dos.webp",
+    "imageAlt": "Mariée de dos, chignon fleuri et robe en dentelle — coiffure de mariage par Constance à Laval",
+    "primaryLabel": "Découvrir mes prestations",
+    "primaryHref": "/prestations",
+    "ghostLabel": "Me contacter",
+    "ghostHref": "/contact"
+  },
+  "intro": {
+    "image": "/images/univers-mariage.webp",
+    "imageAlt": "Constance coiffant une mariée en préparation — coiffure mariage à Laval",
+    "script": "Hello, moi c'est",
+    "name": "Constance",
+    "paragraph1": "Coiffeuse depuis 9 ans, perruquière-posticheuse et maquilleuse. Je me suis formée à l'artistique — du salon à l'opéra, du théâtre aux plateaux de tournage — et je mets aujourd'hui cet œil au service de vos plus beaux moments.",
+    "paragraph2": "Rien de standardisé : tout est créé sur-mesure, pensé pour votre visage, votre histoire et votre événement.",
+    "buttonLabel": "Découvrir mon parcours",
+    "buttonHref": "/histoire"
+  },
+  "univers": {
+    "eyebrow": "Mes univers",
+    "title": "Un savoir-faire, plusieurs mondes",
+    "cards": [
+      {
+        "image": "/images/mariage-portrait.webp",
+        "imageAlt": "Mariée de profil, coiffe fleurie et voile — coiffure et maquillage mariée à Laval (Mayenne)",
+        "feature": true,
+        "tag": "En vedette",
+        "title": "Mariage",
+        "text": "Chignons travaillés, coiffes fleuries et mises en beauté qui subliment votre dos comme votre profil. Le jour J, chaque détail est cousu main pour vous.",
+        "linkLabel": "En savoir plus",
+        "linkHref": "/prestations"
+      },
+      {
+        "image": "/images/univers-ornements.webp",
+        "imageAlt": "Coiffes et ornements de cheveux sur-mesure pour mariée",
+        "feature": false,
+        "tag": "",
+        "title": "Ornements sur-mesure",
+        "text": "Coiffes, postiches et accessoires créés à la main. Des pièces uniques, rien que pour vous.",
+        "linkLabel": "",
+        "linkHref": ""
+      },
+      {
+        "image": "/images/univers-maternite.webp",
+        "imageAlt": "Séance beauté maternité, future maman avec bouquet",
+        "feature": false,
+        "tag": "",
+        "title": "Maternité",
+        "text": "Des séances tout en douceur pour célébrer ce moment suspendu.",
+        "linkLabel": "",
+        "linkHref": ""
+      },
+      {
+        "image": "/images/univers-sfx.webp",
+        "imageAlt": "Maquillage artistique de scène et de spectacle",
+        "feature": false,
+        "tag": "",
+        "title": "Spectacle & artistique",
+        "text": "Maquillage de scène, face painting et créations pour le théâtre, le cabaret et l'audiovisuel.",
+        "linkLabel": "",
+        "linkHref": ""
+      },
+      {
+        "image": "/images/univers-beauty.webp",
+        "imageAlt": "Maquillage de mariée smoky sophistiqué — maquilleuse mariage Laval",
+        "feature": false,
+        "tag": "",
+        "title": "Beauté & éditorial",
+        "text": "Nude lumineux ou smoky sophistiqué, pour un shooting, un défilé ou une belle soirée.",
+        "linkLabel": "",
+        "linkHref": ""
+      }
+    ]
+  },
+  "feat": {
+    "image": "/images/hero-mariee-dos.webp",
+    "imageAlt": "Mariée de dos, chignon fleuri et robe en dentelle — coiffure de mariage par Constance à Laval",
+    "eyebrow": "Le mariage, ma signature",
+    "title": "Sublimée jusqu'au moindre détail — même de dos.",
+    "lead": "Je photographie mes coiffures de dos : c'est là que le travail se révèle, entre le chignon sculpté et la dentelle qui s'ouvre. Le jour de votre mariage, rien n'est laissé au hasard.",
+    "buttonLabel": "Voir les prestations mariage",
+    "buttonHref": "/prestations",
+    "note": "la vue de dos, mon geste signature"
+  },
+  "experience": {
+    "eyebrow": "Un parcours, une légitimité",
+    "title": "Une double formation, para-médicale & artistique",
+    "items": [
+      {
+        "count": 9,
+        "unit": "ans",
+        "bigText": "",
+        "title": "Coiffure & visagisme",
+        "text": "CAP, Brevet Professionnel et 4 ans d'alternance en salon avant l'événementiel."
+      },
+      {
+        "count": 0,
+        "unit": "",
+        "bigText": "Bac Pro",
+        "title": "Perruquière-posticheuse",
+        "text": "Double formation para-médicale et artistique — spécialisée dans l'artistique, une évidence."
+      },
+      {
+        "count": 5,
+        "unit": "ans",
+        "bigText": "",
+        "title": "Maquillage",
+        "text": "Opéra, théâtre, Festival du Film, interviews et événementiel."
+      }
+    ]
+  },
+  "immersive": {
+    "image": "/images/hero-banner.webp",
+    "imageAlt": "Mariée baignée de lumière dorée dans un château — mise en beauté événementielle",
+    "script": "Ma philosophie",
+    "quote": "« Je me suis spécialisée dans l'artistique — ce qui était une évidence depuis le début. »",
+    "cite": "Constance · creartist.even"
+  },
+  "cta": {
+    "title": "Envie d'en savoir davantage ?",
+    "lead": "Parlons de votre projet — mariage, shooting, spectacle ou événement. Je vous réponds avec plaisir.",
+    "buttonLabel": "Me contacter",
+    "buttonHref": "/contact",
+    "instagramLabel": "@creartist.even",
+    "instagramUrl": "https://www.instagram.com/creartist.even/",
+    "geo": "Laval & alentours · Mayenne & Pays de la Loire · Déplacements sur demande"
+  }
+}

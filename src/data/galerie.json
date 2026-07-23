@@ -1,0 +1,25 @@
+{
+  "hero": {
+    "eyebrow": "Galerie",
+    "title": "Mes créations en images",
+    "lead": "Mariage, beauté, spectacle, maternité, ornements… un aperçu de mon travail. Cliquez sur une image pour l'agrandir."
+  },
+  "images": [
+    { "src": "/images/hero-mariee-dos.webp", "alt": "Mariée de dos, chignon fleuri et robe en dentelle — coiffure de mariage par Constance à Laval", "caption": "Mariage", "category": "mariage" },
+    { "src": "/images/univers-beauty.webp", "alt": "Maquillage de mariée smoky sophistiqué — maquilleuse mariage Laval", "caption": "Beauté & éditorial", "category": "beaute" },
+    { "src": "/images/coiffure-tresse.webp", "alt": "Coiffure de mariée tressée ornée de perles, vue de dos — Laval", "caption": "Coiffure mariage", "category": "mariage" },
+    { "src": "/images/wed-getting.webp", "alt": "Mariée en préparation près de la fenêtre, getting ready — coiffure mariage Laval", "caption": "Préparation", "category": "mariage" },
+    { "src": "/images/wed-detail.webp", "alt": "Mains de mariée tenant un bouquet, manches en dentelle — détails de mariage", "caption": "Détails", "category": "mariage" },
+    { "src": "/images/wed-veil.webp", "alt": "Chignon de mariée avec voile et coiffe fleurie", "caption": "Voile & coiffe", "category": "mariage" },
+    { "src": "/images/atelier-mains.webp", "alt": "Création d'une coiffe florale sur-mesure à l'atelier", "caption": "Ornements sur-mesure", "category": "ornements" },
+    { "src": "/images/mariage-portrait.webp", "alt": "Mariée de profil, coiffe fleurie et voile — coiffure et maquillage mariée à Laval (Mayenne)", "caption": "Mariage", "category": "mariage" },
+    { "src": "/images/univers-sfx.webp", "alt": "Maquillage artistique de scène et de spectacle", "caption": "Spectacle & artistique", "category": "spectacle" },
+    { "src": "/images/univers-maternite.webp", "alt": "Séance beauté maternité, future maman avec bouquet", "caption": "Maternité", "category": "maternite" },
+    { "src": "/images/chignon-detail.webp", "alt": "Détail d'un chignon de mariée fleuri — coiffure mariage", "caption": "Détail coiffure", "category": "mariage" },
+    { "src": "/images/defile-editorial.webp", "alt": "Maquillage éditorial et coiffure mode", "caption": "Éditorial", "category": "beaute" },
+    { "src": "/images/mariee-orientale.webp", "alt": "Mariée orientale, coiffure et maquillage sur-mesure — Constance Laval", "caption": "Mariage · orientale", "category": "mariage" },
+    { "src": "/images/maternite-romantique.webp", "alt": "Silhouette d'une future maman en studio — séance maternité", "caption": "Maternité", "category": "maternite" },
+    { "src": "/images/univers-ornements.webp", "alt": "Coiffes et ornements de cheveux sur-mesure pour mariée", "caption": "Ornements", "category": "ornements" },
+    { "src": "/images/univers-mariage.webp", "alt": "Constance coiffant une mariée en préparation — coiffure mariage à Laval", "caption": "Getting ready", "category": "mariage" }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "eyebrow": "Contact",
+    "title": "Parlons de votre projet",
+    "lead": "Mariage, shooting, spectacle ou événement : dites-moi tout. Je vous réponds avec plaisir, en général sous 48 heures."
+  },
+  "note": "Réponse en général sous 48 h · Laval, Mayenne & Pays de la Loire · déplacements sur demande",
+  "faq": [
+    {
+      "question": "Vous déplacez-vous ?",
+      "answer": "Oui ! Je me déplace sur votre lieu de préparation, à Laval, en Mayenne et au-delà selon le projet. Les frais de déplacement sont précisés dans le devis."
+    },
+    {
+      "question": "Quand faut-il réserver ?",
+      "answer": "Pour un mariage, l'idéal est de réserver plusieurs mois à l'avance afin de bloquer la date et prévoir l'essai. Pour un shooting ou un spectacle, on s'adapte à votre calendrier."
+    },
+    {
+      "question": "Faites-vous un essai ?",
+      "answer": "Pour les mariées, oui : un essai coiffure et maquillage est prévu en amont pour affiner le look ensemble, sans stress le jour J."
+    }
+  ]
+}

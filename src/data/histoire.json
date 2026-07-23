@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "eyebrow": "Mon histoire",
+    "title": "Le parcours d'une créatrice",
+    "lead": "Depuis toujours attirée par l'artistique, j'ai construit un métier à la croisée de la coiffure, du maquillage et de la création sur-mesure. Voici comment."
+  },
+  "stories": [
+    {
+      "image": "/images/chignon-detail.webp",
+      "imageAlt": "Détail d'un chignon de mariée fleuri — coiffure mariage",
+      "reversed": false,
+      "label": "D'abord, les cheveux",
+      "title": "9 ans de coiffure & de visagisme",
+      "paragraph1": "Tout commence par la coiffure. CAP, puis Brevet Professionnel, et quatre années d'alternance en salon où j'apprends le geste, la matière et surtout le visagisme : cette manière de lire un visage pour le sublimer.",
+      "paragraph2": "Très vite, le salon ne me suffit plus — j'ai envie d'événements, d'émotions, de jours qui comptent.",
+      "chips": ["Chignons", "Tressages", "Coiffes", "Visagisme"]
+    },
+    {
+      "image": "/images/atelier-mains.webp",
+      "imageAlt": "Création d'une coiffe florale sur-mesure à l'atelier",
+      "reversed": true,
+      "label": "Ma vraie signature",
+      "title": "Perruquière-posticheuse",
+      "paragraph1": "Un Bac Pro sur deux ans, une double formation : para-médicale et artistique. J'ai choisi l'artistique — ce qui était une évidence depuis le début.",
+      "paragraph2": "C'est là que je crée : coiffes, perruques et postiches sur-mesure, des pièces uniques pensées pour une mariée, une scène ou un plateau.",
+      "chips": ["Perruques", "Postiches", "Ornements", "Sur-mesure"]
+    },
+    {
+      "image": "/images/defile-editorial.webp",
+      "imageAlt": "Maquillage éditorial et coiffure mode",
+      "reversed": false,
+      "label": "Puis, la couleur",
+      "title": "5 ans de maquillage, de l'opéra au plateau",
+      "paragraph1": "En parallèle, je me forme au maquillage. Cinq ans plus tard, j'ai maquillé pour l'opéra, le théâtre, le Festival du Film, des interviews et l'Union de la Coiffure.",
+      "paragraph2": "Du nude le plus délicat au maquillage de scène le plus créatif : chaque visage est une nouvelle page.",
+      "chips": ["Beauté", "Éditorial", "Scène", "Face painting"]
+    }
+  ],
+  "values": {
+    "eyebrow": "Ma façon de travailler",
+    "title": "Trois convictions, une même exigence",
+    "items": [
+      {
+        "title": "Sur-mesure",
+        "text": "Rien n'est standardisé. Chaque coiffure, chaque maquillage, chaque ornement est créé pour vous, votre visage et votre histoire."
+      },
+      {
+        "title": "À l'écoute",
+        "text": "On échange, on essaie, on ajuste. Le jour J, vous devez vous sentir vous-même — en plus lumineuse."
+      },
+      {
+        "title": "Polyvalence",
+        "text": "Mariage, spectacle, éditorial, maternité : un même œil artistique, capable de passer du romantique au théâtral."
+      }
+    ]
+  },
+  "cta": {
+    "title": "On se raconte votre projet ?",
+    "lead": "Chaque histoire mérite sa mise en beauté. Parlons de la vôtre.",
+    "primaryLabel": "Me contacter",
+    "primaryHref": "/contact",
+    "ghostLabel": "Voir les prestations",
+    "ghostHref": "/prestations"
+  }
+}

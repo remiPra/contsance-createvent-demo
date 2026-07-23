@@ -1,7 +1,31 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import content from "../page-galerie.html?raw";
+import data from "../data/galerie.json";
+
+const { hero, images } = data;
 ---
 <Layout title={"Galerie mariage — coiffures & maquillages | Constance Laval"} description={"Découvrez les coiffures et maquillages de mariée réalisés par Constance à Laval : chignons fleuris, coiffes sur-mesure, beauté éditoriale et mariages."} ogImage={"/images/coiffure-tresse.webp"}>
-  <Fragment set:html={content} />
+  <div class="wrap page-hero">
+    <p class="eyebrow">{hero.eyebrow}</p>
+    <h1>{hero.title}</h1>
+    <p class="lead">{hero.lead}</p>
+  </div>
+  <section style="padding-top:0"><div class="wrap">
+    <div class="filters reveal">
+      <button class="filt on" data-f="all">Tout</button>
+      <button class="filt" data-f="mariage">Mariage</button>
+      <button class="filt" data-f="beaute">Beauté &amp; éditorial</button>
+      <button class="filt" data-f="spectacle">Spectacle</button>
+      <button class="filt" data-f="maternite">Maternité</button>
+      <button class="filt" data-f="ornements">Ornements</button>
+    </div>
+    <div class="gallery" id="gallery">
+      {images.map((im, i) => (
+        <figure class="gitem" data-cat={im.category}><img src={im.src} alt={im.alt} loading={i > 0 ? "lazy" : null}><figcaption class="cap">{im.caption}</figcaption></figure>
+      ))}
+    </div>
+    <div class="cta reveal" style="margin-top:clamp(40px,5vw,64px)">
+      <a href="/contact" class="btn btn-primary">Réserver ma date</a>
+    </div>
+  </div></section>
 </Layout>

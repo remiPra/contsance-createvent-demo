@@ -1,7 +1,41 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import content from "../page-prestations.html?raw";
+import data from "../data/prestations.json";
+
+const { hero, feat, cards, process } = data;
 ---
 <Layout title={"Prestations coiffure & maquillage mariage Laval | Constance"} description={"Coiffure de mariée, maquillage, coiffes et ornements sur-mesure, mises en beauté spectacle et maternité à Laval. Prestations mariage sur devis par Constance."} ogImage={"/images/mariage-portrait.webp"}>
-  <Fragment set:html={content} />
+  <div class="wrap page-hero">
+    <p class="eyebrow">{hero.eyebrow}</p>
+    <h1>{hero.title}</h1>
+    <p class="lead">{hero.lead}</p>
+  </div>
+  <section><div class="wrap feat reveal">
+    <div class="feat-media"><div class="frame"><span class="tape"></span><img src={feat.image} alt={feat.imageAlt}></div></div>
+    <div>
+      <p class="eyebrow">{feat.eyebrow}</p>
+      <h2>{feat.title}</h2>
+      <p class="lead">{feat.lead}</p>
+      <ul class="incl">{feat.incl.map((x) => <li>{x}</li>)}</ul>
+      <div style="margin-top:26px"><a href={feat.buttonHref} class="btn btn-primary">{feat.buttonLabel}</a></div>
+    </div>
+  </div></section>
+  <section class="band-kraft"><div class="wrap">
+    <div class="sec-head reveal"><p class="eyebrow">{cards.eyebrow}</p><h2>{cards.title}</h2></div>
+    <div class="presta">
+      {cards.items.map((c) => (
+        <article class="card reveal"><figure><img src={c.image} alt={c.imageAlt}></figure>
+          <div class="body"><h3>{c.title}</h3><p>{c.text}</p>
+            <ul>{c.tags.map((t) => <li>{t}</li>)}</ul></div></article>
+      ))}
+    </div>
+    <div class="note-box reveal"><p>Envie d'un accompagnement <strong>maternité</strong> ? Je propose aussi des séances tout en douceur pour les shootings de grossesse. <a href="/contact" style="color:var(--terracotta);font-weight:700">Parlons-en →</a></p></div>
+  </div></section>
+  <section><div class="wrap">
+    <div class="sec-head reveal" style="max-width:720px"><p class="eyebrow">{process.eyebrow}</p><h2>{process.title}</h2></div>
+    <div class="process">
+      {process.steps.map((s) => (<div class="step reveal"><h3>{s.title}</h3><p>{s.text}</p></div>))}
+    </div>
+    <div class="note-box reveal"><p>Chaque prestation étant unique, les tarifs sont établis <strong>sur devis</strong> après notre échange. <a href="/contact" style="color:var(--terracotta);font-weight:700">Demander mon devis →</a></p></div>
+  </div></section>
 </Layout>

@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "eyebrow": "Prestations",
+    "title": "Une mise en beauté pour chaque instant",
+    "lead": "Du mariage à la scène, voici ce que je crée pour vous. Toutes mes prestations sont personnalisées : le tarif se construit ensemble, sur devis."
+  },
+  "feat": {
+    "image": "/images/mariage-portrait.webp",
+    "imageAlt": "Mariée de profil, coiffe fleurie et voile — coiffure et maquillage mariée à Laval (Mayenne)",
+    "eyebrow": "En vedette · Mariage",
+    "title": "Votre wedding day, sublimé de la tête aux détails",
+    "lead": "Coiffure et maquillage de mariée, coiffe sur-mesure, essai en amont et retouches le jour J. Je vous accompagne pour que tout soit parfait, du premier regard au dernier slow.",
+    "incl": [
+      "Essai coiffure & maquillage",
+      "Mise en beauté le jour J",
+      "Coiffe ou ornement sur-mesure",
+      "Retouches & kit longue tenue",
+      "Déplacement sur le lieu",
+      "Cortège & témoins sur demande"
+    ],
+    "buttonLabel": "Demander un devis mariage",
+    "buttonHref": "/contact"
+  },
+  "cards": {
+    "eyebrow": "Toutes mes prestations",
+    "title": "Un savoir-faire, plusieurs mondes",
+    "items": [
+      {
+        "image": "/images/coiffure-tresse.webp",
+        "imageAlt": "Coiffure de mariée tressée ornée de perles, vue de dos — Laval",
+        "title": "Coiffure",
+        "text": "Chignons sophistiqués, tressages, coiffures ornées de perles et de fleurs.",
+        "tags": ["Mariage & cérémonie", "Shooting & défilé", "Soirée & événement"]
+      },
+      {
+        "image": "/images/univers-beauty.webp",
+        "imageAlt": "Maquillage de mariée smoky sophistiqué — maquilleuse mariage Laval",
+        "title": "Maquillage",
+        "text": "Du nude lumineux au smoky sophistiqué, jusqu'à l'éditorial le plus pointu.",
+        "tags": ["Beauté & mariée", "Éditorial & mode", "Soirée & EVJF"]
+      },
+      {
+        "image": "/images/univers-ornements.webp",
+        "imageAlt": "Coiffes et ornements de cheveux sur-mesure pour mariée",
+        "title": "Ornements sur-mesure",
+        "text": "Coiffes, perruques, postiches et accessoires cheveux créés à la main.",
+        "tags": ["Mariage & shooting", "Défilé & spectacle", "Pièces uniques"]
+      },
+      {
+        "image": "/images/univers-sfx.webp",
+        "imageAlt": "Maquillage artistique de scène et de spectacle",
+        "title": "Spectacle & artistique",
+        "text": "Maquillage de scène, effets, face painting et créations pour le spectacle vivant.",
+        "tags": ["Théâtre, opéra, cabaret", "Audiovisuel & festival", "Face painting adulte & enfant"]
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Comment ça se passe",
+    "title": "De la première idée au grand jour",
+    "steps": [
+      { "title": "On échange", "text": "Vous me racontez votre projet, votre style et vos envies. On imagine ensemble la mise en beauté." },
+      { "title": "L'essai", "text": "Pour le mariage, on teste coiffure et maquillage en amont, jusqu'à trouver le look parfait." },
+      { "title": "Le jour J", "text": "Je me déplace, je vous prépare et je reste attentive au moindre détail — même de dos." },
+      { "title": "Le souvenir", "text": "Vous repartez sublimée, avec un kit de retouches pour tenir jusqu'au bout de la fête." }
+    ]
+  }
+}

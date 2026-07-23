@@ -1,0 +1,272 @@
+# ─────────────────────────────────────────────────────────────
+#  Sveltia CMS — configuration de l'espace d'édition de Constance
+# ─────────────────────────────────────────────────────────────
+
+# Où sont enregistrées les modifications : directement dans le dépôt GitHub.
+backend:
+  name: github
+  repo: remiPra/contsance-createvent-demo
+  branch: main
+  # base_url: https://VOTRE-RELAIS-AUTH   # ← à renseigner une fois le relais Cloudflare déployé
+
+# TEST EN LOCAL (Sveltia) : servi depuis localhost, l'admin propose un bouton
+#   « Work with Local Repository ». Cliquer dessus, choisir CE dossier de projet
+#   dans la fenêtre du navigateur, autoriser → l'édition écrit dans les vrais fichiers.
+#   (Aucun proxy ni compte requis. Navigateur Chromium requis pour le sélecteur.)
+
+# Les images uploadées par la cliente atterrissent ici :
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: pages
+    label: "Pages du site"
+    files:
+      - name: accueil
+        label: "Page d'accueil"
+        file: "src/data/accueil.json"
+        fields:
+          - label: "Bannière (haut de page)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Sur-titre", name: eyebrow, widget: string }
+              - { label: "Titre principal", name: title, widget: text }
+              - { label: "Accroche", name: lead, widget: text }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Description de l'image (SEO/accessibilité)", name: imageAlt, widget: string }
+              - { label: "Bouton 1 — texte", name: primaryLabel, widget: string }
+              - { label: "Bouton 1 — lien", name: primaryHref, widget: string }
+              - { label: "Bouton 2 — texte", name: ghostLabel, widget: string }
+              - { label: "Bouton 2 — lien", name: ghostHref, widget: string }
+
+          - label: "Présentation (Hello, moi c'est…)"
+            name: intro
+            widget: object
+            fields:
+              - { label: "Image", name: image, widget: image }
+              - { label: "Description de l'image", name: imageAlt, widget: string }
+              - { label: "Petit texte manuscrit", name: script, widget: string }
+              - { label: "Prénom / titre", name: name, widget: string }
+              - { label: "Paragraphe 1", name: paragraph1, widget: text }
+              - { label: "Paragraphe 2", name: paragraph2, widget: text }
+              - { label: "Bouton — texte", name: buttonLabel, widget: string }
+              - { label: "Bouton — lien", name: buttonHref, widget: string }
+
+          - label: "Mes univers"
+            name: univers
+            widget: object
+            fields:
+              - { label: "Sur-titre", name: eyebrow, widget: string }
+              - { label: "Titre de la section", name: title, widget: string }
+              - label: "Cartes"
+                name: cards
+                widget: list
+                fields:
+                  - { label: "Image", name: image, widget: image }
+                  - { label: "Description de l'image", name: imageAlt, widget: string }
+                  - { label: "Carte mise en avant ?", name: feature, widget: boolean, default: false }
+                  - { label: "Étiquette (ex. En vedette)", name: tag, widget: string, required: false }
+                  - { label: "Titre", name: title, widget: string }
+                  - { label: "Texte", name: text, widget: text }
+                  - { label: "Bouton — texte (optionnel)", name: linkLabel, widget: string, required: false }
+                  - { label: "Bouton — lien (optionnel)", name: linkHref, widget: string, required: false }
+
+          - label: "Section signature (le mariage de dos)"
+            name: feat
+            widget: object
+            fields:
+              - { label: "Image", name: image, widget: image }
+              - { label: "Description de l'image", name: imageAlt, widget: string }
+              - { label: "Sur-titre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: text }
+              - { label: "Texte", name: lead, widget: text }
+              - { label: "Bouton — texte", name: buttonLabel, widget: string }
+              - { label: "Bouton — lien", name: buttonHref, widget: string }
+              - { label: "Petite note (flèche)", name: note, widget: string }
+
+          - label: "Parcours / chiffres clés"
+            name: experience
+            widget: object
+            fields:
+              - { label: "Sur-titre", name: eyebrow, widget: string }
+              - { label: "Titre de la section", name: title, widget: string }
+              - label: "Blocs"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Nombre (0 = pas de chiffre animé)", name: count, widget: number, default: 0, value_type: int }
+                  - { label: "Unité (ex. ans)", name: unit, widget: string, required: false }
+                  - { label: "Texte affiché si pas de chiffre (ex. Bac Pro)", name: bigText, widget: string, required: false }
+                  - { label: "Titre", name: title, widget: string }
+                  - { label: "Texte", name: text, widget: text }
+
+          - label: "Citation / philosophie"
+            name: immersive
+            widget: object
+            fields:
+              - { label: "Image de fond", name: image, widget: image }
+              - { label: "Description de l'image", name: imageAlt, widget: string }
+              - { label: "Petit texte manuscrit", name: script, widget: string }
+              - { label: "Citation", name: quote, widget: text }
+              - { label: "Signature", name: cite, widget: string }
+
+          - label: "Appel à l'action (bas de page)"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Texte", name: lead, widget: text }
+              - { label: "Bouton — texte", name: buttonLabel, widget: string }
+              - { label: "Bouton — lien", name: buttonHref, widget: string }
+              - { label: "Instagram — texte affiché", name: instagramLabel, widget: string }
+              - { label: "Instagram — lien", name: instagramUrl, widget: string }
+              - { label: "Ligne zone géographique", name: geo, widget: string }
+
+      # ─────────────────────────────  MON HISTOIRE  ─────────────────────────────
+      - name: histoire
+        label: "Page — Mon histoire"
+        file: "src/data/histoire.json"
+        fields:
+          - label: "Entête"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Sur-titre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Accroche", name: lead, widget: text }
+          - label: "Étapes du parcours"
+            name: stories
+            widget: list
+            fields:
+              - { label: "Image", name: image, widget: image }
+              - { label: "Description de l'image", name: imageAlt, widget: string }
+              - { label: "Image à droite (inverser)", name: reversed, widget: boolean, default: false }
+              - { label: "Petit intitulé", name: label, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Paragraphe 1", name: paragraph1, widget: text }
+              - { label: "Paragraphe 2", name: paragraph2, widget: text }
+              - { label: "Mots-clés (chips)", name: chips, widget: list, field: { label: "Mot", name: mot, widget: string } }
+          - label: "Convictions"
+            name: values
+            widget: object
+            fields:
+              - { label: "Sur-titre", name: eyebrow, widget: string }
+              - { label: "Titre de la section", name: title, widget: string }
+              - label: "Blocs"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Titre", name: title, widget: string }
+                  - { label: "Texte", name: text, widget: text }
+          - label: "Appel à l'action (bas de page)"
+            name: cta
+            widget: object
+            fields:
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Texte", name: lead, widget: text }
+              - { label: "Bouton 1 — texte", name: primaryLabel, widget: string }
+              - { label: "Bouton 1 — lien", name: primaryHref, widget: string }
+              - { label: "Bouton 2 — texte", name: ghostLabel, widget: string }
+              - { label: "Bouton 2 — lien", name: ghostHref, widget: string }
+
+      # ─────────────────────────────  PRESTATIONS  ─────────────────────────────
+      - name: prestations
+        label: "Page — Prestations"
+        file: "src/data/prestations.json"
+        fields:
+          - label: "Entête"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Sur-titre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Accroche", name: lead, widget: text }
+          - label: "Bloc en vedette (Mariage)"
+            name: feat
+            widget: object
+            fields:
+              - { label: "Image", name: image, widget: image }
+              - { label: "Description de l'image", name: imageAlt, widget: string }
+              - { label: "Sur-titre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Texte", name: lead, widget: text }
+              - { label: "Ce qui est inclus", name: incl, widget: list, field: { label: "Élément", name: item, widget: string } }
+              - { label: "Bouton — texte", name: buttonLabel, widget: string }
+              - { label: "Bouton — lien", name: buttonHref, widget: string }
+          - label: "Cartes de prestations"
+            name: cards
+            widget: object
+            fields:
+              - { label: "Sur-titre", name: eyebrow, widget: string }
+              - { label: "Titre de la section", name: title, widget: string }
+              - label: "Cartes"
+                name: items
+                widget: list
+                fields:
+                  - { label: "Image", name: image, widget: image }
+                  - { label: "Description de l'image", name: imageAlt, widget: string }
+                  - { label: "Titre", name: title, widget: string }
+                  - { label: "Texte", name: text, widget: text }
+                  - { label: "Étiquettes", name: tags, widget: list, field: { label: "Étiquette", name: tag, widget: string } }
+          - label: "Déroulé (comment ça se passe)"
+            name: process
+            widget: object
+            fields:
+              - { label: "Sur-titre", name: eyebrow, widget: string }
+              - { label: "Titre de la section", name: title, widget: string }
+              - label: "Étapes"
+                name: steps
+                widget: list
+                fields:
+                  - { label: "Titre", name: title, widget: string }
+                  - { label: "Texte", name: text, widget: text }
+
+      # ─────────────────────────────  GALERIE  ─────────────────────────────
+      - name: galerie
+        label: "Page — Galerie"
+        file: "src/data/galerie.json"
+        fields:
+          - label: "Entête"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Sur-titre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Accroche", name: lead, widget: text }
+          - label: "Photos de la galerie"
+            name: images
+            widget: list
+            fields:
+              - { label: "Image", name: src, widget: image }
+              - { label: "Description de l'image", name: alt, widget: string }
+              - { label: "Légende affichée", name: caption, widget: string }
+              - label: "Catégorie (pour les filtres)"
+                name: category
+                widget: select
+                options:
+                  - { label: "Mariage", value: mariage }
+                  - { label: "Beauté & éditorial", value: beaute }
+                  - { label: "Spectacle", value: spectacle }
+                  - { label: "Maternité", value: maternite }
+                  - { label: "Ornements", value: ornements }
+
+      # ─────────────────────────────  CONTACT  ─────────────────────────────
+      - name: contact
+        label: "Page — Contact"
+        file: "src/data/contact.json"
+        fields:
+          - label: "Entête"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Sur-titre", name: eyebrow, widget: string }
+              - { label: "Titre", name: title, widget: string }
+              - { label: "Accroche", name: lead, widget: text }
+          - { label: "Ligne d'info sous le formulaire", name: note, widget: string }
+          - label: "Questions fréquentes (FAQ)"
+            name: faq
+            widget: list
+            fields:
+              - { label: "Question", name: question, widget: string }
+              - { label: "Réponse", name: answer, widget: text }
