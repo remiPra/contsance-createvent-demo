@@ -20,3 +20,9 @@ Thumbs.db
 _*.png
 _*.webp
 public/admin/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
