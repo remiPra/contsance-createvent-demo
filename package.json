@@ -6,12 +6,17 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
-    "astro": "^4.16.18",
+    "@astrojs/cloudflare": "11",
     "@fontsource/cormorant-garamond": "^5.1.0",
     "@fontsource/karla": "^5.1.0",
-    "@fontsource/petit-formal-script": "^5.1.0"
+    "@fontsource/petit-formal-script": "^5.1.0",
+    "astro": "^4.16.18"
+  },
+  "devDependencies": {
+    "wrangler": "^4.113.0"
   }
 }
